@@ -9,7 +9,6 @@ class Parking // deklaration av class i php
 
     private function readParkingFile($filename) //Läser in fil
     {
-
         $filetwo = fopen($filename, 'r'); // öppnar
 
         $filethree = fread($filetwo, $filename); // filreader
@@ -17,8 +16,6 @@ class Parking // deklaration av class i php
 
         return $filethree;
     }
-
-
 }
 
 

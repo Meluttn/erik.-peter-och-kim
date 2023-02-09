@@ -19,11 +19,10 @@ class Vehicles
         $this->price = $price;
         $this->vehicleType = $vehicleType;
         $this->startTime = time(); // Skapar starttid i sekunder
-    }
-
-
-
+    }   
 }
+
+
 
 
 
