@@ -11,7 +11,7 @@
 <body>
    <header>
       <h1>Create an account for Prague Parking</h1>   
-      <h2><?php session_start(); if(isset($_SESSION['message'])) {echo $_SESSION['message'];} session_destroy(); unset($_SESSION['message']); ?></h2>  
+      <h2><?php session_start(); if(isset($_SESSION['message'])) {echo $_SESSION['message'];} session_destroy(); unset($_SESSION['message']); ?>  
    </header>
    <main>
       <fieldset>        
