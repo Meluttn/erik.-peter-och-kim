@@ -6,7 +6,6 @@ session_start();
 
 require('functions.php');
 
-
 if (isset($_POST["user"]) && !isset($_SESSION["user"])) {
   
    $user = test_input($_POST["user"]);
