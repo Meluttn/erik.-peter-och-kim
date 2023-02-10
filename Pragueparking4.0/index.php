@@ -95,23 +95,24 @@ switch ($action)
 
         $carUnit = new Vehicles($regNR, $size, $_POST['vType'], $price);
         writeToFile($carUnit);
-        function writeToFile($carUnit)
-        {
-            $carArr=(array)$carUnit;
-            echo 'rad 122';
-           // $fp=fopen('csv/parkedvehicles.csv','w'); //file open
-            
-           // fclose() //file close
-
-
-        }
+        
         break;
         
 
     }
 
 
+    function writeToFile($carUnit)
+    {
+        $carArr=(array)$carUnit;
+        var_dump($carArr) ;
+        echo 'rad 122';
+       // $fp=fopen('csv/parkedvehicles.csv','w'); //file open
+        
+       // fclose() //file close
 
+
+    }
 
 
 include('view/footer.html');
