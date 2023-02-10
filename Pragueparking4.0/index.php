@@ -47,19 +47,14 @@ if(isset($_POST['Logout']))
     include('view/logout.php');
 }
 
-switch ($action) {
-
-
+switch ($action) 
+{
     case 'park': // Om park kör filtreringsmetod
         $regNR = test_input($regNR);
         $carUnit = new Vehicles($regNR, 2, $_POST['vType'], 20);
         var_dump($carUnit);
-
         break;
-
-
 }
-
 
 include('view/footer.html');
 ?>

@@ -16,10 +16,9 @@ if (isset($_POST["user"]) && !isset($_SESSION["user"])) {
    
    $csvhandle = fopen('csv/users.csv', 'r');
   
-   while (! feof($csvhandle)) {
-      
+   while (! feof($csvhandle)) 
+   {      
       $temp = fgetcsv($csvhandle, 1000, ',');
-
       if(!empty($temp)){
          if($temp === $userArr){
             $_SESSION["user"] = $_POST["user"];
