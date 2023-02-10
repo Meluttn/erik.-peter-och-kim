@@ -1,9 +1,12 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/water.css@2/out/water.css">
 
 <?php
+
 session_start();
 
 require('functions.php');
+
+
 if (isset($_POST["user"]) && !isset($_SESSION["user"])) {
   
    $user = test_input($_POST["user"]);
@@ -36,4 +39,3 @@ if (isset($_POST["user"]) && !isset($_SESSION["user"])) {
    <button><a href="view/signupform.php">go to signup</a></button>
    <?php
 }
-

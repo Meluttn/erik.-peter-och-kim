@@ -24,6 +24,24 @@ if (isset($_POST['Park']))
 {
     include('view/park.php');
 }
+if (isset($_POST['Collect'])) 
+{
+    include('view/collect.php');
+}
+if (isset($_POST['Move'])) 
+{
+    include('view/move.php');
+}
+if (isset($_POST['Find'])) 
+{
+    include('view/find.php');
+}
+if (isset($_POST['Print'])) 
+{
+    include('view/print.php');
+}
+
+// so that we can log out... 
 if(isset($_POST['Logout']))
 {
     include('view/logout.php');

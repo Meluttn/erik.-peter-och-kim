@@ -10,13 +10,14 @@
 
 <body>
    <header>
-      <h1>Create an account for Prague Parking</h1>
+      <h1>Create an account for Prague Parking</h1>   
+      <h2><?php session_start(); if(isset($_SESSION['message'])) {echo $_SESSION['message'];} session_destroy(); unset($_SESSION['message']); ?></h2>  
    </header>
    <main>
       <fieldset>        
          <form method="post" action="../signup.php">
          <label for="user">User</label>
-         <input type="text" name="user" required>
+         <input type="text" name="user" required>         
          <label for="password">Password</label>         
          <input type="password" name="password" required>
          <label for="password_confirmation">Repeat password</label>
