@@ -51,10 +51,68 @@ switch ($action)
 {
     case 'park': // Om park kör filtreringsmetod
         $regNR = test_input($regNR);
-        $carUnit = new Vehicles($regNR, 2, $_POST['vType'], 20);
-        var_dump($carUnit);
+
+
+        function priceVehicles($vType){
+
+            if($vType == 'car')
+            {
+                
+                $price = 80;
+                return $price;
+                
+            
+
+
+
+            }
+            else 
+            $price = 40;
+            return $price;
+        }
+        function sizeVehicles($vType)
+        {
+        
+
+            if($vType == 'car')
+            {
+                
+                $size = 20; // kapacitet för MC
+                return $size;
+                
+            
+
+
+
+            }
+            else 
+            $size = 10; // kapacitet för MC
+            return $size;
+
+        }
+        $price = priceVehicles($_POST['vType']);
+        $size = sizeVehicles($_POST['vType']);
+
+        $carUnit = new Vehicles($regNR, $size, $_POST['vType'], $price);
+        writeToFile($carUnit);
+        function writeToFile($carUnit)
+        {
+            $carArr=(array)$carUnit;
+            echo 'rad 122';
+           // $fp=fopen('csv/parkedvehicles.csv','w'); //file open
+            
+           // fclose() //file close
+
+
+        }
         break;
-}
+        
+
+    }
+
+
+
+
 
 include('view/footer.html');
 ?>
